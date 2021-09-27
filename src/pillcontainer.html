@@ -1,0 +1,5 @@
+<template>
+  <template for:each={items} for:item="item">
+    <lightning-pill label={item.label} data-has-error={item.haserror} key={item.index}></lightning-pill>
+  </template>
+</template>

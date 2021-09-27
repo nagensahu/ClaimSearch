@@ -1,0 +1,31 @@
+<template>
+  <li class="slds-split-view__list-item" role="presentation">
+    <a href="javascript:void(0)" aria-selected={selected} role="option"
+      class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabindex="0">
+      <div class="slds-grid">
+        <div class="slds-col">
+          <lightning-button-icon icon-name="utility:add" alternative-text="Add" title="Add" onclick={handleselect}>
+          </lightning-button-icon>
+        </div>
+        <div class="slds-col">
+          <div class="slds-grid slds-wrap slds-p-bottom_small">
+            <span class="slds-truncate slds-text-heading_small slds-text-color_default" title="CLAIM NUMBER">265272808500</span>
+            <span class="slds-truncate slds-text-heading_small slds-col_bump-left" title="Charged amount">$125</span>
+          </div>
+          <div class="slds-grid slds-wrap slds-p-bottom_x-small">
+            <span class="slds-truncate" title="PROVIDER NAME">METROPOLITAN HOSPITAL UB</span>
+            <span class="slds-truncate slds-col_bump-left" title="Service end date">04/15/2021</span>
+          </div>
+          <div class="slds-grid slds-wrap slds-p-bottom_x-small">
+            <span class="slds-truncate slds-text-body_regular slds-text-color_default" title="MEMBER LIABILITY">MEMBER LIABILITY : $0</span>
+          </div>
+          <div class="slds-grid slds-wrap">
+            <lightning-badge label="Accepted;Batch Complete"></lightning-badge>
+            <span class="slds-truncate slds-col_bump-left" title="Billed amount">$125</span>
+            <span class="slds-truncate slds-col_bump-left" title="Claim paid date">04/27/2021</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+</template>

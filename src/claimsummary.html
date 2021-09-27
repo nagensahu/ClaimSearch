@@ -1,0 +1,354 @@
+<template>
+  <lightning-card title="Claim Detail">
+    <lightning-layout multiple-rows>
+      <lightning-layout-item size="12">
+        <lightning-layout>
+          <lightning-layout-item>
+            <lightning-layout multiple-rows>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Member Name">CLAIM NUMBER</p>
+                <p>255608384900</p>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Member ID">CLAIM TYPE</p>
+                <p>MEDICAL</p>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Product name">MEMBER NAME</p>
+                <p>MARDI L SLUITER</p>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Start Date">MEMBER ID</p>
+                <p>948024291-00</p>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Medical Business Subcategory">PROVIDER NAME
+                </p>
+                <p>Holland Hospital</p>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Start Date">PROVIDER ID</p>
+                <p><a href="javascript:void(0);">800008201</a></p>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Start Date">NPI NUMBER</p>
+                <p>1871672618</p>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-large" flexibility="auto">
+                <p class="slds-form-element__label" title="Start Date">TAX ID</p>
+                <p>382800065</p>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-layout-item>
+          <lightning-layout-item padding="around-large" flexibility="auto">
+            <lightning-badge label="Accepted;Batch Complete"></lightning-badge>
+          </lightning-layout-item>
+          <div class="slds-border_bottom"></div>
+        </lightning-layout>
+      </lightning-layout-item>
+
+      <lightning-layout-item size="12">
+        <lightning-card>
+
+          <h3 slot="title">
+            <lightning-button-icon variant="bare" title="Additional Information" icon-name="utility:switch">
+            </lightning-button-icon>
+            Additional Information
+          </h3>
+          <lightning-layout multiple-rows>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Service start date">Service start date</p>
+              <p>12/28/2020</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Service end date">Service end date</p>
+              <p>12/28/2020</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Date of birth">Date of birth</p>
+              <p>06/20/1964</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Line of business">Line of business</p>
+              <p>FULLY FUNDED LINE OF BUSINESS</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Group">Group
+              </p>
+              <p>MY PRIORITY PPACA</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Claim form">Claim form</p>
+              <p>PROFESSIONAL</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Claim input date">Claim input date</p>
+              <p>01/06/2021</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Claim submission">Claim submission</p>
+              <p>AUTOMATIC</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Principle procedure code">Principle procedure code</p>
+              <p></p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Principle diagnosis code">Principle diagnosis code</p>
+              <p>R3129</p>
+              <p>Other microscopic hematuria</p>
+              <p class="slds-is-relative" onmouseover={showDiagnosisPopover} onmouseout={hideDiagnosisPopover}>
+                <a href="javascript:void(0);" onclick={opencodemodal}> View More</a>
+                <template if:true={diagnosisPopover}>
+                  <c-diagnosiscodepopover>
+                  </c-diagnosiscodepopover>
+                </template>
+              </p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Original claim ID">Original claim ID</p>
+              <p></p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Adjusted claim ID">Adjusted claim ID</p>
+              <p></p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Related claim ID">Related claim ID</p>
+              <p></p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Charged amount">Charged amount</p>
+              <p>$29.00</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Bill Type/Class">Bill Type/Class</p>
+              <p>01 3</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="Bill Frequency">Bill Frequency</p>
+              <p>1</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" flexibility="auto">
+              <p class="slds-form-element__label" title="D.R.G code">D.R.G code</p>
+              <p></p>
+            </lightning-layout-item>
+          </lightning-layout>
+
+        </lightning-card>
+        <div class="slds-border_bottom"></div>
+      </lightning-layout-item>
+    </lightning-layout>
+
+    <c-claimquicklinks>
+    </c-claimquicklinks>
+
+    <lightning-layout-item size="12">
+      <lightning-layout>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <p class="slds-form-element__label" title="Member Name">Claim received date</p>
+          <p>05/12/2015</p>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <p class="slds-form-element__label" title="Member ID">Claim paid date</p>
+          <p>05/17/2015</p>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" class="slds-float_right" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Amount paid on claim</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" class="slds-float_right" label=" " name="prodname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Start Date">Total member liability</p>
+            <p>$0.00 </p>
+          </div>
+        </lightning-layout-item>
+      </lightning-layout>
+
+    </lightning-layout-item>
+
+    <lightning-card title="Payment Summary">
+      <lightning-layout multiple-rows>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Billed amount</p>
+            <p>$426.00</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Discount amount</p>
+            <p> $387.29</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Allowed amount</p>
+            <p> $38.71</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Total paid</p>
+            <p> $10.21</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Total disallow</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Member deductible</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Co insurance</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Co payment</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Withhold amount</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">C.O.B adj</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">Member disallowed</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">HRA considered</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-large" flexibility="auto">
+          <div class="slds-float_left">
+            <lightning-input type="checkbox-button" label=" " name="amountname">
+            </lightning-input>
+          </div>
+          <div class="slds-p-left_small slds-float_left">
+            <p class="slds-form-element__label" title="Product name">HRA paid</p>
+            <p> $100.44</p>
+          </div>
+        </lightning-layout-item>
+      </lightning-layout>
+      <div class="slds-border_bottom"></div>
+    </lightning-card>
+
+    <c-claimlineitems></c-claimlineitems>
+    <c-claimremittance></c-claimremittance>
+    <c-claiminquiries></c-claiminquiries>
+
+    <!-- diagnosis code popover-->
+    <template if:true={openmodel}>
+      <div>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+          aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                title="Close" onclick={closecodemodal}>
+                                <lightning-icon icon-name="utility:close" size="medium">
+                                </lightning-icon>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+              <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"> Principle Diagnosis Codes
+              </h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+              <lightning-layout>
+                <lightning-layout-item padding="around-small" size="12">
+                  <lightning-datatable key-field="id" data={codeData} columns={codeColumns} hide-checkbox-column="true"
+                    show-row-number-column column-widths-mode="auto">
+                  </lightning-datatable>
+                </lightning-layout-item>
+              </lightning-layout>
+            </div>
+            <footer class="slds-modal__footer">
+              <lightning-button label="Close" variant="neutral" onclick={closecodemodal}></lightning-button>
+            </footer>
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+      </div>
+    </template>
+  </lightning-card>
+</template>

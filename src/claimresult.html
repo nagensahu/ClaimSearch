@@ -1,0 +1,65 @@
+<template>
+  <lightning-layout>
+    <lightning-layout-item>
+      <div class="demo-only" style="display:flex;width:23rem;">
+        <div class="slds-split-view_container slds-is-open">
+          <article aria-hidden="false" id="split-view-id"
+            class="slds-split-view slds-grid slds-grid_vertical slds-grow">
+            <header class="slds-split-view__header">
+              <div class="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small">
+                <div class="slds-has-flexi-truncate">
+                  <div class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                      <lightning-icon icon-name="standard:partner_fund_claim" alternative-text="Claim" title="Claim">
+                      </lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                      <h1 class="slds-text-heading_small slds-text-color_default slds-p-right_x-small">
+                        Claim Search Results
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-no-flex slds-grid">
+                </div>
+              </div>
+              <div class="slds-grid slds-grid_vertical-align-center slds-p-top_small">
+                <lightning-button label="Create Inquiry" variant="brand"></lightning-button>
+              </div>
+              <div class="slds-grid slds-grid_vertical-align-center">
+                <div class="slds-p-bottom_small">
+                  <lightning-combobox name="sort" label="Sort By" value={sortedBy} placeholder="Select"
+                    options={sortoptions} onchange={handleSortChange}>
+                  </lightning-combobox>
+                </div>
+                <div class="slds-no-flex slds-grid slds-col_bump-right slds-m-top_x-small">
+                  <lightning-button-icon icon-name={sortDirection} size="medium" variant="border"
+                    alternative-text="Sort Direction" title="Sort" onclick={toggleSort}>
+                  </lightning-button-icon>
+                </div>
+              </div>
+            </header>
+            <div class="slds-grid slds-grid_vertical slds-scrollable" style="height:50rem;">
+              <div class="slds-split-view__list-header slds-grid">
+                8 Items
+              </div>
+              <ul aria-multiselectable="false" role="listbox" aria-label="Select an item to open it">
+                <c-claimresultitem></c-claimresultitem>
+                <c-claimresultitem></c-claimresultitem>
+                <c-claimresultitem></c-claimresultitem>
+                <c-claimresultitem></c-claimresultitem>
+                <c-claimresultitem></c-claimresultitem>
+                <c-claimresultitem></c-claimresultitem>
+                <c-claimresultitem></c-claimresultitem>
+                <c-claimresultitem></c-claimresultitem>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </lightning-layout-item>
+    <lightning-layout-item>
+      <c-claimsummary></c-claimsummary>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

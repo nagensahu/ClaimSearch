@@ -1,0 +1,26 @@
+<template>
+  <lightning-card title="Quick Links">
+    <lightning-layout>
+      <lightning-layout-item padding="around-large" flexibility="auto">
+        <a onclick={openclaimnotes}> Claim Notes</a>
+      </lightning-layout-item>
+      <lightning-layout-item padding="around-large" flexibility="auto">
+        <a> Member Related Notes</a>
+      </lightning-layout-item>
+      <lightning-layout-item padding="around-large" flexibility="auto">
+        <a> View E.O.B</a>
+      </lightning-layout-item>
+      <lightning-layout-item padding="around-large" flexibility="auto">
+        <a> Onbase Claim View</a>
+      </lightning-layout-item>
+      <lightning-layout-item padding="around-large" flexibility="auto">
+        <a> View C.O.B</a>
+      </lightning-layout-item>
+    </lightning-layout>
+    <div class="slds-border_bottom"></div>
+  </lightning-card>
+
+  <template if:true={showclaimnote}>
+    <c-claimnotes onclose={closeclaimnotes}></c-claimnotes>
+  </template>
+</template>

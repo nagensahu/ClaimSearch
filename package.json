@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/nagensahu.lwc-ktx0l04d",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve kIjjLRLgFltguD7tJlWx --open"
+  }
+}

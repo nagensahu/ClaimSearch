@@ -1,0 +1,52 @@
+<template>
+  <lightning-card title="Line Items">
+    <div class="slds-scrollable_x" style="width:75vw">
+      <!--Keep the width in vw to make sure that the div is responsive-->
+      <lightning-datatable key-field="id" data={lineitemData} columns={lineitemColumns} column-widths-mode="auto">
+      </lightning-datatable>
+    </div>
+    <lightning-layout>
+      <lightning-layout-item size="4" padding="around-small">
+        <div>
+          <p>Showing 1 to 1 of 1 entries</p>
+        </div>
+      </lightning-layout-item>
+      <!--Number of records ends here-->
+      <!--Button -->
+      <lightning-layout-item size="4" padding="around-small">
+        <lightning-layout horizontal-align="center">
+          <lightning-layout-item>
+            <lightning-button-group>
+              <lightning-button label="Prev" onclick={changePage}>
+              </lightning-button>
+              <lightning-button label="1">
+              </lightning-button>
+              <lightning-button label="Next" onclick={changePage}>
+              </lightning-button>
+            </lightning-button-group>
+          </lightning-layout-item>
+        </lightning-layout>
+      </lightning-layout-item>
+      <!--Button ends here-->
+      <!--Option to choose records per page-->
+      <lightning-layout-item size="4" padding="around-small" alignment-bump="left">
+        <template if:false={emptyList}>
+          <lightning-layout>
+            <lightning-layout-item class="slds-text-align_right slds-p-top_x-small slds-p-right_x-small"
+              alignment-bump="left">
+              <div>Show</div>
+            </lightning-layout-item>
+            <lightning-layout-item>
+              <lightning-combobox options={rowsPerPageOptions} onchange={changeRowsPerPage} value="10"
+                variant="label-hidden">
+              </lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-text-align_left slds-p-top_x-small slds-p-left_x-small">
+              <div>Per Page</div>
+            </lightning-layout-item>
+          </lightning-layout>
+        </template>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+</template>
