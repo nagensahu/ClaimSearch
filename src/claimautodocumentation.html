@@ -1,0 +1,10 @@
+<template>
+  <lightning-card>
+    <div class="slds-scrollable_x">
+      <!--Keep the width in vw to make sure that the div is responsive-->
+      <lightning-datatable key-field="id" data={lineitemData} columns={lineitemColumns} column-widths-mode="auto"
+        hide-checkbox-column>
+      </lightning-datatable>
+    </div>
+  </lightning-card>
+</template>
