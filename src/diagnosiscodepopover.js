@@ -11,6 +11,11 @@ const CODEDATA = [
         codeDescription: "Encounter for general adult medical examination without abnormal findings",
         code: "Z0000"
     },
+    {   
+        id: "Z0102",
+        codeDescription: "Encounter for general adult medical examination without abnormal findings",
+        code: "Z0102"
+    }
 ];
 
 const CODECOLUMNS = [
@@ -19,8 +24,7 @@ const CODECOLUMNS = [
 ];
 
 export default class Diagnosiscodepopover extends LightningElement {
-
-    codeData = CODEDATA;
+    @track codeData = CODEDATA;
     codeColumns = CODECOLUMNS;
 
 }
