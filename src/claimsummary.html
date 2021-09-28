@@ -1,5 +1,11 @@
 <template>
-  <lightning-card title="Claim Detail">
+  <lightning-card>
+    <div slot="title">
+      Claim Detail
+      <lightning-button-icon icon-name="utility:cart" onclick={handlecartSelectClick} alternative-text="Compare"
+        class="slds-p-left_small">
+      </lightning-button-icon>
+    </div>
     <lightning-layout multiple-rows>
       <lightning-layout-item size="12">
         <lightning-layout>

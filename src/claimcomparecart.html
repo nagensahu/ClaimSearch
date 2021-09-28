@@ -1,0 +1,21 @@
+<template>
+  <lightning-card>
+    <div slot="title">
+      <lightning-button icon-name="utility:cart" title="View Cart" label="Claims Compare Cart (2)" variant="base"
+        onclick={toggleCart}>
+      </lightning-button>
+    </div>
+
+    <template if:true={showCart}>
+      <lightning-button icon-name="utility:new_window" title="Open Compare" label="Open Compare" variant="brand"
+        slot="actions" class="slds-p-left_large">
+      </lightning-button>
+      <div class="slds-scrollable_x slds-p-around_small" style="background-color:rgb(242,242,242)">
+        <!--Keep the width in vw to make sure that the div is responsive-->
+        <lightning-datatable key-field="id" data={lineitemData} columns={lineitemColumns} column-widths-mode="auto"
+          hide-checkbox-column>
+        </lightning-datatable>
+      </div>
+    </template>
+  </lightning-card>
+</template>
