@@ -1,11 +1,18 @@
 <template>
   <li class="slds-split-view__list-item" role="presentation">
     <a href="javascript:void(0)" aria-selected={selected} role="option"
-      class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabindex="0">
+      class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate" tabindex="0"
+      onclick={setAsCurrentItem}>
       <div class="slds-grid">
         <div class="slds-col">
-          <lightning-button-icon icon-name="utility:add" alternative-text="Add" title="Add" onclick={handleselect}>
+          <lightning-input type="checkbox-button" label=" " name="amountname" onchange={handleselect}>
+          </lightning-input>
+          <lightning-button-icon icon-name="utility:new_window" onclick={handlenewWindowClick}
+            alternative-text="Open in new Sub tab" class="slds-p-bottom_medium">
           </lightning-button-icon>
+          <lightning-button-icon-stateful icon-name="utility:cart" selected={cartSelectState}
+            onclick={handlecartSelectClick} alternative-text="Compare">
+          </lightning-button-icon-stateful>
         </div>
         <div class="slds-col">
           <div class="slds-grid slds-wrap slds-p-bottom_small">

@@ -53,7 +53,7 @@ const LINEITEMCOLUMNS = [
     initialWidth : 100 },
     { label: 'Total Patient Liability', fieldName: 'totalpatientliability', type: "text", sortable: false, wrapText: true, initialWidth : 200},
     { label: 'Front End Accepted', fieldName: 'frontendaccepted', type: "text", sortable: false, wrapText: true, initialWidth : 200 },
-    { label: '', fieldName: 'remove', type: "button-icon", sortable: false, wrapText: true, initialWidth : 40,
+    { label: '', fieldName: 'remove', type: "button-icon", sortable: false, wrapText: true,
      typeAttributes: {variant: "brand", iconName: "utility:delete"}}
 ];
 
