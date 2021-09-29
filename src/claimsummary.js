@@ -16,6 +16,21 @@ const CODEDATA = [
         codeDescription: "Encounter for general adult medical examination without abnormal findings",
         code: "Z0000"
     },
+    {   
+        id: "Z0102",
+        codeDescription: "Encounter for general adult medical examination without abnormal findings",
+        code: "Z0102"
+    },
+    {   
+        id: "R3455",
+        codeDescription: "Other microscopic hematuria",
+        code: "R3455"
+    },
+    {   
+        id: "E930",
+        codeDescription: "Hypothyroidism, unspecified",
+        code: "E930"
+    },
 ];
 
 const CODECOLUMNS = [
@@ -45,7 +60,9 @@ export default class Claimsummary extends LightningElement {
     this.openmodel = false;
   }
 
-
+  handlecartSelectClick(){
+    
+  }
 
 
 }

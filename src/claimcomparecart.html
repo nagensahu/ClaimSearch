@@ -1,0 +1,19 @@
+<template>
+  <div class="slds-p-top_large slds-p-bottom_large">
+    <lightning-card>
+      <div slot="title">
+        <lightning-icon icon-name="utility:multi_picklist" size="small" alternative-text="Compare"></lightning-icon>
+        Claims Compare Cart
+      </div>
+      <lightning-button icon-name="utility:new_window" title="Open Compare" label="Open Compare" variant="brand"
+        slot="actions">
+      </lightning-button>
+      <div class="slds-scrollable_x slds-p-around_small">
+        <!--Keep the width in vw to make sure that the div is responsive-->
+        <lightning-datatable key-field="id" data={lineitemData} columns={lineitemColumns} column-widths-mode="auto"
+          hide-checkbox-column>
+        </lightning-datatable>
+      </div>
+    </lightning-card>
+  </div>
+</template>
