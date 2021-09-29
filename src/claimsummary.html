@@ -2,9 +2,6 @@
   <lightning-card>
     <div slot="title">
       Claim Detail
-      <lightning-button-icon icon-name="utility:cart" onclick={handlecartSelectClick} alternative-text="Compare"
-        class="slds-p-left_small">
-      </lightning-button-icon>
     </div>
     <lightning-layout multiple-rows>
       <lightning-layout-item size="12">
@@ -319,9 +316,15 @@
       <div class="slds-border_bottom"></div>
     </lightning-card>
 
-    <c-claimlineitems></c-claimlineitems>
-    <c-claimremittance></c-claimremittance>
-    <c-claiminquiries></c-claiminquiries>
+    <div class="slds-p-top-large">
+      <c-claimlineitems></c-claimlineitems>
+    </div>
+    <div class="slds-p-top-large">
+      <c-claimremittance></c-claimremittance>
+    </div>
+    <div class="slds-p-top-large">
+      <c-claiminquiries></c-claiminquiries>
+    </div>
 
     <!-- diagnosis code popover-->
     <template if:true={openmodel}>

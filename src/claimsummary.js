@@ -60,7 +60,9 @@ export default class Claimsummary extends LightningElement {
     this.openmodel = false;
   }
 
-
+  handlecartSelectClick(){
+    
+  }
 
 
 }

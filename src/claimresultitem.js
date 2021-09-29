@@ -11,7 +11,7 @@ export default class Claimresultitem extends LightningElement {
   }
 
   setAsCurrentItem(){
-    const atag  = this.template.querySelector('a');
+    const atag  = this.template.querySelector('.item');
     atag.classList.add('slds-nav-vertical__item','slds-is-active');
     // This just selects the current item. Need to fire an event to tell 
     //the parent to deselect other items
@@ -19,5 +19,9 @@ export default class Claimresultitem extends LightningElement {
 
   handlecartSelectClick(){
     this.cartSelectState = !this.cartSelectState;
+  }
+
+  handlenewWindowClick(){
+    
   }
 }

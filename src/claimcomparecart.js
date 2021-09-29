@@ -11,7 +11,6 @@ const LINEITEMDATA = [
         status :"Accepted;Batch Complete",
         paiddate: "2014-09-10",
         totalpatientliability: "$300.80",
-        frontendaccepted: "ACCEPTED",
         remove:""
     },
     {   
@@ -24,14 +23,13 @@ const LINEITEMDATA = [
         status :"Accepted;Batch Complete",
         paiddate: "2014-09-10",
         totalpatientliability: "$320.80",
-        frontendaccepted: "ACCEPTED",
         remove:""
     }
 ];
 
 const LINEITEMCOLUMNS = [
     { label: 'Claim Number', fieldName: 'claimnumber', type: "text", sortable: false, wrapText: true, initialWidth : 140 },
-    { label: 'Date of service', fieldName: 'dateofservice', type: "date-local", sortable: false, wrapText: true, typeAttributes:{
+    { label: 'Date of Service', fieldName: 'dateofservice', type: "date-local", sortable: false, wrapText: true, typeAttributes:{
             month: "2-digit",
             day: "2-digit"
         },
@@ -46,13 +44,12 @@ const LINEITEMCOLUMNS = [
         },
     initialWidth : 100 },
     { label: 'Total Patient Liability', fieldName: 'totalpatientliability', type: "text", sortable: false, wrapText: true, initialWidth : 200},
-    { label: 'Front End Accepted', fieldName: 'frontendaccepted', type: "text", sortable: false, wrapText: true, initialWidth : 200 },
     { label: '', fieldName: 'remove', type: "button-icon", sortable: false, wrapText: true,
      typeAttributes: {variant: "brand", iconName: "utility:delete"}}
 ];
 
 export default class Claimcomparecart extends LightningElement {
-    showCart = false;
+    showCart = true;
     @track lineitemData = LINEITEMDATA;
     lineitemColumns = LINEITEMCOLUMNS;
     toggleCart(){

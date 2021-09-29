@@ -1,21 +1,19 @@
 <template>
-  <lightning-card>
-    <div slot="title">
-      <lightning-button icon-name="utility:cart" title="View Cart" label="Claims Compare Cart (2)" variant="base"
-        onclick={toggleCart}>
-      </lightning-button>
-    </div>
-
-    <template if:true={showCart}>
+  <div class="slds-p-top_large slds-p-bottom_large">
+    <lightning-card>
+      <div slot="title">
+        <lightning-icon icon-name="utility:multi_picklist" size="small" alternative-text="Compare"></lightning-icon>
+        Claims Compare Cart
+      </div>
       <lightning-button icon-name="utility:new_window" title="Open Compare" label="Open Compare" variant="brand"
-        slot="actions" class="slds-p-left_large">
+        slot="actions">
       </lightning-button>
-      <div class="slds-scrollable_x slds-p-around_small" style="background-color:rgb(242,242,242)">
+      <div class="slds-scrollable_x slds-p-around_small">
         <!--Keep the width in vw to make sure that the div is responsive-->
         <lightning-datatable key-field="id" data={lineitemData} columns={lineitemColumns} column-widths-mode="auto"
           hide-checkbox-column>
         </lightning-datatable>
       </div>
-    </template>
-  </lightning-card>
+    </lightning-card>
+  </div>
 </template>
